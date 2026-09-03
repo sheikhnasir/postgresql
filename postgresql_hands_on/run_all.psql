@@ -1,0 +1,18 @@
+\set ON_ERROR_STOP on
+\echo 'Creating database...'
+\connect postgres
+\ir scripts/00_create_database.sql
+
+\echo 'Connecting to techstore_db...'
+\connect techstore_db
+\ir scripts/01_schema.sql
+\ir scripts/02_seed_data.sql
+\ir scripts/03_crud.sql
+\ir scripts/04_queries.sql
+\ir scripts/05_advanced_queries.sql
+\ir scripts/06_programmability.sql
+\ir scripts/07_transactions.sql
+\ir scripts/08_performance_security.sql
+
+\echo 'TechStore hands-on database is ready.'
+
